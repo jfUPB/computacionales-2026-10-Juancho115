@@ -75,5 +75,6 @@ M=M+1
 - M=D: es que se almacene el valor de D en la RAM  .
   D=M: el valor almacenado en la RAM lo registra la D
 
--Ir a la dirección de KBD y leer lo que haya en la RAM
+- Ir a la dirección de KBD y leer lo que haya en la RAM
+
 
