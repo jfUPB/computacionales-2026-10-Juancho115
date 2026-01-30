@@ -15,6 +15,37 @@
 
 ## Bitácora de aplicación 
 ### Actividad 04 
+-
+```
+@12
+M=0
+
+@13
+M=1
+
+(LOOP)
+@13
+D=M
+@5
+D=D-A
+@END
+D;JGT
+
+@13
+D=M
+@12
+M=M+D
+
+@13
+M=M+1
+
+@LOOP
+0;JMP
+
+(END)
+@END
+0;JMP
+```
 
 <img width="1553" height="901" alt="Captura de pantalla 2026-01-29 202135" src="https://github.com/user-attachments/assets/959305e2-55da-4d25-88ec-5d8eccfd284d" />
 
@@ -30,5 +61,19 @@
   Registro A: Es un registro que indica la dirección de donde se quiere hacer algo.
   ALU: Es Arithmetic Logic Unit que se encarga de todo lo que tenga que ver con operaciones
 
--  D;JGT
--  
+-  con una etiqueta de salto ejemplo: D;JGT
+-  Un Loop se implementa por medio de operaciones y con ayudas de los tag (Loop) y condiciones de JMP 
+```
+@0
+M=O
+(LOOP)
+@0
+M=M+1
+@LOOP
+0;JMP
+```
+- M=D: es que se almacene el valor de D en la RAM  .
+  D=M: el valor almacenado en la RAM lo registra la D
+
+-Ir a la dirección de KBD y leer lo que haya en la RAM
+
