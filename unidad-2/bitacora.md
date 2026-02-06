@@ -69,8 +69,16 @@ M=D
 (fin)
 0;JMP
 ```
+
+### Actividad 05
+- <img width="1062" height="486" alt="image" src="https://github.com/user-attachments/assets/8fcbeae3-6c3a-48b4-8e79-3c52945b62bf" />
+
+- <img width="763" height="558" alt="image" src="https://github.com/user-attachments/assets/c476d3fa-b907-43a3-b8b6-71f1a262b404" />
+ 
+
 ## Bitácora de aplicación 
 
 
 
 ## Bitácora de reflexión
+
