@@ -626,9 +626,13 @@ M=D
  ```
 <img width="420" height="588" alt="image" src="https://github.com/user-attachments/assets/8b12a364-884d-4619-8b15-1edc34bea406" />
 
+<img width="1541" height="215" alt="image" src="https://github.com/user-attachments/assets/b816a1dd-fb3f-485d-b3ae-d1b6f1aabc31" />
+
+
 
 
 ## Bitácora de reflexión
+
 
 
 
