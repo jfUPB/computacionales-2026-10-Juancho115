@@ -165,4 +165,29 @@ public:
 
 
 ## Bitácora de reflexión
+### 01
+- El heap seria una cocina y el stack son lugares de memoria que cada uno tiene una funcion independeiente, el heap es para cuando algo en la memoria se quiere que se pueda usar en cualquier lado y el stack es algo de mas corto uso, que se crea y se destruye al rato.
+### 02
+- Por 'valor' se genera una copia independiente de lo que se esté llamando y lo que ocurre en el la memoria seria:
+```
+(Original)          (Copia)
+------------        ----------------
+a = 5      --->     x = 5 (copia)
+```
+Asi si se modifica cualquiera de las 2 independientemente
 
+- Por 'referencia' es como si se pudiera modificar desde cualquier lado lo que se esta llamando lo que pasa en memoria es:
+```
+b = 5
+x ----> referencia a b
+```
+- Por 'puntero' pasa la dirección de memoria y apunta a lo que haya ahí, lo que pasa en memoria es:
+```
+a = 5
+x = dirección de a
+```
+### 3
+- Variable local es la que se pone en el stack y solo existe en una función si se sale de ahi se destruye 
+- Variable global es la que está accesible en cualquier momento del programa, se puede llamar donde sea y siempre está 'viva' en el programa encuentra en el heap
+- variable local estatica  es una combinación entre global y local siempre esta 'viva' pero solo se puede encontrar dentro de la función
+### 4
