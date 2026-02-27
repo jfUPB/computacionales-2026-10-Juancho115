@@ -191,3 +191,26 @@ x = dirección de a
 - Variable global es la que está accesible en cualquier momento del programa, se puede llamar donde sea y siempre está 'viva' en el programa encuentra en el heap
 - variable local estatica  es una combinación entre global y local siempre esta 'viva' pero solo se puede encontrar dentro de la función
 ### 4
+- los objetos se almacenan dependiendo de donde se creen
+
+### 5
+el memory leak esta en que se crea un personaje y no se destruye nunca netonces ese es el memory leak, si se crean 100 personajes, 100 personajes siempre van a aesatr asi no se usen 
+
+### 6
+Se mostrarian 10 enemigos porque siempre se aumenta el contructor
+
+### 7 
+se crearia un destructor para los enemigos 
+```
+
+~Enemigo() {
+    totalEnemigos--;
+}
+```
+
+### 8
+- Me parece mas critico el Stack porque generalmente vivos lo que no se necesita siempre, pues aqui es donde usualmente se generan los memery leaks
+### 9
+- La diferencia es el control de memoria que en uno es automatico y el otro manual lo que permite que en C++ se puede optimizar mucho mejor a comparacion de C#
+### 10 
+- Es importante para una buena optimización y mejor uso de la memoria, para poder crear algo mas fluido y de calidad, asi evitando problemas de rendimiento en el juego o aplicación que se cree
