@@ -229,6 +229,7 @@ void ofApp::keyPressed(int key) {
 
         ofSaveScreen("frame.png");
     }
-}```
-
+}
+```
 ## Bitácora de reflexión
+
