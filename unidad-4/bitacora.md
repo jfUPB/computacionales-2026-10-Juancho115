@@ -58,8 +58,11 @@ public:
     void keyPressed(int key);
 
     void mouseMoved(int x, int y);   // detectar movimiento del mouse
-};```
+};
+```
+
 ### OfApp.Cpp
+
 ```C++
 #include "ofApp.h"
 
@@ -231,5 +234,7 @@ void ofApp::keyPressed(int key) {
     }
 }
 ```
+
 ## Bitácora de reflexión
+
 
