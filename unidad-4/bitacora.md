@@ -239,6 +239,96 @@ void ofApp::keyPressed(int key) {
 }
 ```
 
+- Codigo agregado **Enque**
+
+```C++
+void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float opacity) {
+
+    Node* newNode = new Node(x, y, radius, color, opacity); //esto crea un nuevo nodo con la información del trazo (posición, tamaño, color y opacidad).
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+    if (isEmpty()) {
+
+        front = rear = newNode; //Si la cola está vacía, el nuevo nodo es el primero y el último.
+
+    }
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    else {
+
+        rear->next = newNode;
+        rear = newNode; // Si ya hay nodos, el nuevo se agrega al final de la cola.
+    }
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    size++; //Aumenta el contador de nodos en la cola.
+
+   
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    if (size > maxSize) { 
+        dequeue(); //Si la cola supera el tamaño máximo, se elimina el nodo más antiguo. Esto mantiene el efecto FIFO.
+    }
+}
+```
+- Tambien se agregó **Deque**
+```C++
+    if (isEmpty()) return; //Si la cola está vacía, no hace nada.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Node* temp = front; // Guarda el nodo más antiguo.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    front = front->next; // El siguiente nodo pasa a ser el nuevo inicio de la cola.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    delete temp; //Libera la memoria del nodo eliminado.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    size--; // Reduce el número de nodos.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    if (front == nullptr) { // Si ya no quedan nodos, también se reinicia el final de la cola.
+
+        rear = nullptr;
+    }
+}
+
+```
+- **Clear**
+
+```C++
+    while (!isEmpty()) { // Elimina nodos uno por uno hasta que la cola quede vacía.
+
+        dequeue();
+    }
+}
+```
+- **IsEmpty**
+
+```C++
+    return front == nullptr; // Verifica si es nulo para saber si no hay trazos en la cola
+}
+
+```
+- **Draw**
+```C++
+    Node* current = strokes.front; //Empieza desde el primer nodo de la cola.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    while (current != nullptr) { // Recorre todos los nodos.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        ofSetColor(current->color, current->opacity);
+
+        ofDrawCircle(current->x, current->y, current->radius); // Dibuja un círculo con la información almacenada.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        current->opacity -= 5; // Es la velocidad con la que se eliminan los trazos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        current = current->next; //Pasa al siguiente nodo.
+    }
+}
+
+```
+
 ## Bitácora de reflexión
 
 
