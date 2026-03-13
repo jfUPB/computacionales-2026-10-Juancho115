@@ -104,7 +104,8 @@ void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float op
 
         front = rear = newNode;
 
-    } else {
+    }
+    else {
 
         rear->next = newNode;
         rear = newNode;
@@ -187,6 +188,8 @@ void ofApp::draw() {
 
         ofSetColor(current->color, current->opacity);
 
+        current->opacity -= 5;
+
         ofDrawCircle(current->x, current->y, current->radius);
 
         current = current->next;
@@ -202,7 +205,7 @@ void ofApp::mouseMoved(int x, int y) {
     ofColor color;
     color.setHsb(ofRandom(255), 200, 255);
 
-    float opacity = ofRandom(80, 255);
+    float opacity = 255;
 
     strokes.enqueue(x, y, radius, color, opacity);
 }
@@ -222,7 +225,8 @@ void ofApp::keyPressed(int key) {
 
             strokes.maxSize = 100;
 
-        } else {
+        }
+        else {
 
             strokes.maxSize = 50;
         }
@@ -236,5 +240,6 @@ void ofApp::keyPressed(int key) {
 ```
 
 ## Bitácora de reflexión
+
 
 
