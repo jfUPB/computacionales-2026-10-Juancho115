@@ -122,5 +122,41 @@ Reutilizando el mismo breakpoint de la evidencia anterior
 
 En el debugger se puede evidenciar que los atributos privados estan indicados con un candado como se muestra en el `ZigZagParticle`, a diferencia de los otros atributos como se ve en en los atributos heredados del `RisingParticle`, ademas los atributos protegidos de RisingParticle son accesibles desde la subclase, mientras que los privados no lo serían, lo que refleja el principio de encapsulamiento.
 
+#### Evidencia 5
+
+El breakpoint se ubico en la siguiente linea 
+<img width="1909" height="528" alt="image" src="https://github.com/user-attachments/assets/bcaf4364-a844-4a55-af73-eeb611151de9" />
+
+Podemos observar el momento en el que se crea una particula pero sin embargo al tener el **size=0** en **particles** muestra que no se ha insertado aun
+
+Siguiente breakpoint
+<img width="1484" height="466" alt="image" src="https://github.com/user-attachments/assets/0e23c9da-2764-419d-8827-3abbb3d0300b" />
+
+Podemos ver el momento de creación de 1000 objetos 
+
+#### Evidencia 6
+Breakpoint de delete en donde se libera de la memoria del heap
+<img width="1481" height="375" alt="image" src="https://github.com/user-attachments/assets/8457ea89-5ffd-45e3-a8c8-7cc1329a60b7" />
+
+
+
+Breakpoint del erase donde elimina el puntero de vector 
+<img width="1485" height="477" alt="image" src="https://github.com/user-attachments/assets/a19cc292-f266-4b95-8b4e-6943bba648e3" />
+
+
+Con esto demostramos que no hay fugas de memoria pues cada creación **new** pasa por **delete** asi que no deja vivo nada que pueda llenar la memoria
+
+#### Evidencia 7
+En la primera captura se observa el momento de creación de una partícula, donde el vector particles comienza a llenarse **size = 1**
+<img width="1484" height="567" alt="image" src="https://github.com/user-attachments/assets/5d59b277-1282-4882-b046-7abedba47075" />
+
+
+En la segunda captura se observa el sistema en ejecución con 1000 partículas activas **size = 1000**. Cada partícula es actualizada correctamente mediante el método **update(dt)**, y se puede inspeccionar una de ellas con valores válidos de posición y velocidad.
+Update
+<img width="1483" height="432" alt="image" src="https://github.com/user-attachments/assets/d6d3a9bd-61e0-4f77-9afe-a6ccac3114f2" />
+
+
+
+
 
 ## Bitácora de reflexión
