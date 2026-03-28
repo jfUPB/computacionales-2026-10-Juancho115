@@ -73,6 +73,25 @@ public class Programa
 ```
 
 ## Bitácora de aplicación 
+### Fase 1
+- #### Particulas
+ZigZagParticle
+Movimiento lateral oscilatorio.
+Representación visual con triángulo.
+
+<img width="755" height="549" alt="image" src="https://github.com/user-attachments/assets/e6b383e6-ba5b-4f50-90f1-8ba579dff0f5" />
+
+SpiralParticle
+Movimiento en espiral.
+Representación visual con rotación.
+
+<img width="1017" height="628" alt="image" src="https://github.com/user-attachments/assets/fcaef7ba-0bef-4937-9ad0-06919f951921" />
+
+- #### Explosion
+  <img width="964" height="358" alt="image" src="https://github.com/user-attachments/assets/1b7d37ce-2b87-482c-a115-96f70dd93955" />
+
+
+
 
 ### Fase 2
 
@@ -160,3 +179,9 @@ Update
 
 
 ## Bitácora de reflexión
+- ##### 1 Jerarquía de clases del caso de estudio con tus extensiones
+<img width="1368" height="642" alt="image" src="https://github.com/user-attachments/assets/df6119e7-ffb5-4692-9494-734d0e30eb58" />
+
+- #### 2 Objeto en memoria con herencia y vtable
+<img width="748" height="458" alt="image" src="https://github.com/user-attachments/assets/d687d4cd-0d5a-4662-87e1-3bae88f0360e" />
+
