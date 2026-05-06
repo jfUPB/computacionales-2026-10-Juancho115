@@ -225,15 +225,6 @@ int main()
 ### 2
 #### Contexto y carga de OpenGL
 
-Punto de inspección:
-glfwInit → glfwCreateWindow → glfwMakeContextCurrent → gladLoadGLLoader.
-
-Pasos de captura:
-1.	Poner breakpoint en glfwInit.
-2.	Avanzar (Step Over) hasta gladLoadGLLoader.
-3.	Captura donde se ve el orden en el depurador.
-Texto para bitácora:
-
 <img width="511" height="122" alt="image" src="https://github.com/user-attachments/assets/358dd0d7-6dc6-41a8-a15d-602a9729de92" />
 
 <img width="865" height="122" alt="image" src="https://github.com/user-attachments/assets/d0291b5d-c14b-4c6d-9cab-f5a0ecc1d7a6" />
@@ -247,15 +238,6 @@ Primero inicializo GLFW porque es la librería que crea la ventana y el contexto
 
 #### Del arreglo al shader
 
-Punto de inspección:
-vertices[], glBufferData, glVertexAttribPointer(0, 3, ...), layout(location = 0) in vec3 aPos.
-Pasos de captura:
-1.	Breakpoint en setupTriangle.
-2.	Inspeccionar vertices[] en el depurador.
-3.	Avanzar hasta glVertexAttribPointer.
-4.	Captura mostrando location = 0 en shader y llamada glVertexAttribPointer(0, ...).
-Texto para bitácora:
-
 <img width="987" height="662" alt="image" src="https://github.com/user-attachments/assets/aa0ec02a-33fa-4312-9f2d-957d9bb4524d" />
 
 <img width="884" height="628" alt="image" src="https://github.com/user-attachments/assets/5f03252f-be6c-48b1-b3a7-c9313f390f40" />
@@ -265,13 +247,6 @@ En el shader, layout(location = 0) in vec3 aPos recibe ese atributo. Así el arr
 
 #### Uniform y cambio visual
 
-Punto de inspección:
-glUniform4f(colorLocation, ...), glUniform2f(offsetLocation, ...).
-Pasos de captura:
-1.	Breakpoint en glUniform4f o glUniform2f.
-2.	Captura con valores cambiando.
-3.	Captura de pantalla con triángulo cambiando color/posición.
-Texto para bitácora:
 <img width="889" height="505" alt="image" src="https://github.com/user-attachments/assets/8e5773d1-496b-4801-a7ef-2a08e14c7c32" />
 
 <img width="879" height="462" alt="image" src="https://github.com/user-attachments/assets/439e543b-003b-4816-9d08-2f8952d749f4" />
